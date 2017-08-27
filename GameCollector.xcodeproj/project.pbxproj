@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					D0230D841F4D7CDD00431ACB = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G3629CA3M6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3629CA3M6;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pickett-Inc.GameCollector";
@@ -286,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G3629CA3M6;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pickett-Inc.GameCollector";
@@ -313,6 +316,7 @@
 				D0230D9C1F4D7CDD00431ACB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

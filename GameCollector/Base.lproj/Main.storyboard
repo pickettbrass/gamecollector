@@ -21,15 +21,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2co-5R-Dto">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2co-5R-Dto" secondAttribute="bottom" id="4YB-dP-2AY"/>
+                            <constraint firstAttribute="trailing" secondItem="2co-5R-Dto" secondAttribute="trailing" id="G1Y-Wk-vkF"/>
+                            <constraint firstItem="2co-5R-Dto" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ock-SP-je2"/>
+                            <constraint firstItem="2co-5R-Dto" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="an7-r7-vMR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uD4-WW-mfU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n7s-5C-QZ9">
                             <connections>
-                                <segue destination="CXZ-x0-Nn7" kind="show" id="DrB-ga-O8l"/>
+                                <segue destination="CXZ-x0-Nn7" kind="show" identifier="gameSeque" id="DrB-ga-O8l"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2co-5R-Dto" id="h1C-p0-gzQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,13 +82,22 @@
                                     <action selector="addTapped:" destination="CXZ-x0-Nn7" eventType="touchUpInside" id="LCy-la-DNq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkF-6k-hV7">
+                                <rect key="frame" x="165" y="438" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="CXZ-x0-Nn7" eventType="touchUpInside" id="USm-ml-jXR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75381222205574105" green="0.79113792144335982" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yFB-E0-6uh" firstAttribute="centerX" secondItem="czC-E8-srr" secondAttribute="centerX" id="cGt-4n-X5b"/>
                             <constraint firstItem="U1W-Et-cKY" firstAttribute="top" secondItem="NpJ-PR-jjH" secondAttribute="bottom" constant="50" id="dft-Zf-LBV"/>
                             <constraint firstItem="yFB-E0-6uh" firstAttribute="top" secondItem="sFn-P8-32f" secondAttribute="bottom" constant="50" id="jwc-09-yU7"/>
+                            <constraint firstItem="lkF-6k-hV7" firstAttribute="top" secondItem="yFB-E0-6uh" secondAttribute="bottom" constant="24" id="lN8-v6-2TU"/>
                             <constraint firstItem="U1W-Et-cKY" firstAttribute="centerX" secondItem="czC-E8-srr" secondAttribute="centerX" id="mkE-Pp-Z8O"/>
+                            <constraint firstItem="lkF-6k-hV7" firstAttribute="centerX" secondItem="czC-E8-srr" secondAttribute="centerX" id="qFD-5s-GaJ"/>
                             <constraint firstItem="sFn-P8-32f" firstAttribute="top" secondItem="U1W-Et-cKY" secondAttribute="bottom" constant="40" id="soz-AM-wzK"/>
                             <constraint firstItem="sFn-P8-32f" firstAttribute="centerX" secondItem="czC-E8-srr" secondAttribute="centerX" id="yNa-TL-mcV"/>
                             <constraint firstItem="sFn-P8-32f" firstAttribute="width" secondItem="U1W-Et-cKY" secondAttribute="width" id="ya4-iw-bpX"/>
@@ -97,6 +121,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="TitleTextField" destination="sFn-P8-32f" id="EGe-FF-O2a"/>
+                        <outlet property="addupdatebutton" destination="yFB-E0-6uh" id="s0D-1a-rfI"/>
+                        <outlet property="deletebutton" destination="lkF-6k-hV7" id="RAz-nx-IUk"/>
                         <outlet property="gameImageView" destination="U1W-Et-cKY" id="OOp-Yp-6uU"/>
                     </connections>
                 </viewController>
